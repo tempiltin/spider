@@ -9,11 +9,11 @@ def request(url):
         pass
 
 target_url = "samtuit.uz"
-with open("/root/PycharmProjects/pythonProject/crawler/subdomains.list", "r") as wordlist_file:
+with open("/root/PycharmProjects/pythonProject/crawler/subdomain.list", "r") as wordlist_file:
      for line in wordlist_file:
          word = line.strip()
-         # test_url = word +"."+ target_url # subdomain uchun
-         test_url = target_url + "/" + word
+         test_url = word +"."+ target_url # subdomain uchun
+         # test_url = target_url + "/" + word
          respone = request(test_url)
 
          if respone:
